@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Project9_countdown_slideshow</title>
+        <link rel="stylesheet" href="./CSS/main.css">
+    </head>
+    <body>
+        <!--Countdown-->
+        <p>How many seconds would you like to set your alarm for?</p>
+        <input id="seconds" value="" />
+        <button onclick="countdown()">Click here</button>
+        <p id="timer"></p>
+        <br>
+        <br>
+        <!--Slideshow-->
+        <div class="slidecontainer">
+
+            <!--Individual Slide-->
+            <div class="slides">
+                <img src="./Images/car1.jpg" style="width:100%">
+            </div>
+
+            <!--Individual Slide-->
+            <div class="slides">
+                <img src="./Images/car2.jpg" style="width:100%">
+            </div>
+
+            <!--Individual Slide-->
+            <div class="slides">
+                <img src="./Images/car3.jpg" style="width:100%">
+            </div>
+
+            <!--Next and Prev buttons-->
+            <a class="prev" onclick="moveSlide(-1)">&#10094</a>
+            <a class="next" onclick="moveSlide(1)">&#10095</a>
+        </div>
+
+        <script src="./JS/main.js"></script>
+    </body>
+</html>

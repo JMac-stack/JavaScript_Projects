@@ -1,0 +1,4 @@
+/* Hide Images by default */
+.slides {
+    display: none;
+}
