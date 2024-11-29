@@ -1,1 +1,2 @@
-document.write(typeof("3" + 3))// Type coercion by concaternation with string. Also using typeof operator.
+var x = 2E310, y = -2E310; //Variable with value of infinity and -infinty respectively.
+document.write(typeof("3" + 3) + `<br>${x}<br>${y}`)// Type coercion by concaternation with string and using typeof operator. Template string to display x and y values.
