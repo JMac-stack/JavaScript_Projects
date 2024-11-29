@@ -1,0 +1,1 @@
+document.write(typeof("3" + 3))// Type coercion by concaternation with string. Also using typeof operator.
