@@ -35,7 +35,7 @@ function dogFunc() {
     document.getElementById("New_and_This").innerHTML = Dog1.Animal_Age;
 }
 
-//Nested Function.
+// Nested Function.
 function increaseNum() {
     var Num1 = document.getElementById("Nested_Function").innerHTML;
     function addOne(Num) {
