@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #slideshow {
+                margin: 50px auto; 
+                position: sticky;
+                top: 30%;
+                width: 240px; 
+                height: 240px; 
+                padding: 10px; 
+                box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            }
+
+            #slideshow > div { 
+                position: absolute; 
+                top: 10px; 
+                left: 10px; 
+                right: 10px; 
+                bottom: 10px;
+                font-size: 2rem;
+            }
+
+            body {
+                height: 2000px;
+            }
+
+            #slideshow > button {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+            }
+
+            #form-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 20px;
+                margin: 20px;
+                border: solid 2px black;
+                display: none;
+            }
+
+        </style>
+        <script defer>
+
+            // For Slides.
+            let index = 0;
+            let slides = document.getElementsByClassName("slide");
+
+            function hideSlides() {
+                for( let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none"
+                }
+            }
+
+            function showSlide() {
+                hideSlides();
+                slides[index].style.display = "block"
+                index++;
+                if (index > 2) {
+                    index = 0;
+                }
+            }
+
+            //For popup.
+            let pop = 
+
+            function hidePopup() {
+                document.getElementById("form-container").style.display = "none";
+            }
+
+            function showPopup() {
+                document.getElementById("form-container").style.display = "block";
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="slideshow">
+            <div class="slide">Slide 1</div>
+            <div class="slide">Slide 2</div>
+            <div class="slide">Slide 3</div>
+            <button id="show">Click me!</button>
+        </div>
+        <hr>
+        <div id="form-container">
+            <form>
+                <input type="text" placeholder="text">
+                <input type="submit" value="submit">
+            </form>
+        </div>
+        <script>
+            showSlide();
+            setInterval(showSlide,2000);
+            document.getElementById("show").addEventListener("click",showPopup);
+        </script>
+    </body>
+</html>
